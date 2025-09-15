@@ -1,0 +1,112 @@
+:root {
+  --khs-primary: 262 83% 58%;
+  --khs-primary-foreground: 210 20% 98%;
+  --khs-primary-glow: 266 100% 78%;
+  --khs-surface: 0 0% 100%;
+  --khs-surface-muted: 220 14% 96%;
+  --khs-foreground: 224 71% 4%;
+  --khs-border: 220 13% 91%;
+  --khs-shadow: 262 83% 58%;
+
+  --khs-gradient-primary: linear-gradient(135deg, hsl(var(--khs-primary)) 0%, hsl(var(--khs-primary-glow)) 100%);
+  --khs-shadow-elegant: 0 10px 30px -10px hsl(var(--khs-primary) / 0.25);
+  --khs-shadow-card: 0 6px 24px -8px hsl(var(--khs-primary) / 0.18);
+}
+
+/* Page containers */
+.customer {
+  background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+}
+
+.customer .customer__title,
+.customer h1,
+.customer h2,
+.customer h3 {
+  color: hsl(var(--khs-foreground));
+}
+
+/* Cards and tables */
+.customer table.order-history,
+.customer table.order-details {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--khs-shadow-card);
+  background: hsl(var(--khs-surface));
+}
+
+.customer thead th {
+  background: hsl(var(--khs-surface-muted));
+}
+
+.customer tbody tr:hover {
+  background: hsl(0 0% 100% / 0.6);
+}
+
+/* Buttons */
+.customer button,
+.button,
+.shopify-challenge__button {
+  background: var(--khs-gradient-primary) !important;
+  color: hsl(var(--khs-primary-foreground)) !important;
+  border-radius: 10px !important;
+}
+
+.customer button:hover,
+.button:hover,
+.shopify-challenge__button:hover {
+  filter: brightness(1.03) saturate(1.02);
+  box-shadow: var(--khs-shadow-elegant);
+}
+
+/* Inputs */
+.customer .field input,
+.customer select,
+.field__input,
+.select__select {
+  border-radius: 12px !important;
+  box-shadow: 0 0 0 1px hsl(var(--khs-border)) inset, 0 2px 10px hsl(220 14% 46% / 0.05);
+}
+
+.customer .field input:focus,
+.customer select:focus,
+.field__input:focus,
+.select__select:focus {
+  box-shadow: 0 0 0 2px hsl(var(--khs-primary)) inset, 0 0 0 3px hsl(var(--khs-primary) / 0.15);
+}
+
+/* Links */
+.customer a,
+.link,
+.inline-richtext a {
+  color: hsl(var(--khs-primary));
+}
+
+.customer a:hover,
+.link:hover,
+.inline-richtext a:hover {
+  color: hsl(var(--khs-primary));
+  text-decoration-color: hsl(var(--khs-primary));
+}
+
+/* Badges and subtle UI */
+.badge {
+  background: hsl(var(--khs-surface-muted));
+  border-color: hsl(var(--khs-border));
+}
+
+/* Section padding harmonization */
+[class^='section-'][class$='-padding'] {
+  scroll-margin-top: 8rem;
+}
+
+/* Guest login block and pagination polish */
+.customer hr {
+  opacity: 0.7;
+}
+
+.customer .pagination li :first-child {
+  border-radius: 8px;
+  box-shadow: 0 1px 0 hsl(var(--khs-border));
+}
+
+
