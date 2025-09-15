@@ -1,0 +1,41 @@
+MIT License
+
+Copyright (c) 2025 Konnect AI Platform
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Shopify Theme License Notice
+
+This theme is based on the Shopify Studio theme and has been modified for Konnect Hub Studio.
+Original Shopify Studio theme components retain their respective licenses.
+
+## Konnect Hub Studio Modifications
+
+The following modifications have been made to create the Konnect Hub Studio theme:
+
+1. **Brand Identity**: Updated theme name, author, and branding
+2. **Color Schemes**: Redesigned color palettes for AI/tech aesthetic
+3. **Typography**: Updated font system to Assistant font family
+4. **Layout**: Optimized page width and spacing for content display
+5. **UI Components**: Enhanced with modern design elements
+6. **Configuration**: Updated theme settings and presets
+
+All Konnect Hub Studio specific modifications are released under the MIT License above.

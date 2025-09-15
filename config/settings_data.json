@@ -1,0 +1,195 @@
+{
+  "current": "Konnect Hub Studio",
+  "presets": {
+    "Konnect Hub Studio": {
+      "logo_width": 180,
+      "color_schemes": {
+        "scheme-1": {
+          "settings": {
+            "background": "#ffffff",
+            "background_gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            "text": "#1a202c",
+            "button": "#4f46e5",
+            "button_label": "#ffffff",
+            "secondary_button_label": "#4f46e5",
+            "shadow": "#1a202c"
+          }
+        },
+        "scheme-2": {
+          "settings": {
+            "background": "#f7fafc",
+            "background_gradient": "",
+            "text": "#2d3748",
+            "button": "#667eea",
+            "button_label": "#ffffff",
+            "secondary_button_label": "#667eea",
+            "shadow": "#2d3748"
+          }
+        },
+        "scheme-3": {
+          "settings": {
+            "background": "#1a202c",
+            "background_gradient": "linear-gradient(135deg, #1a202c 0%, #2d3748 100%)",
+            "text": "#ffffff",
+            "button": "#667eea",
+            "button_label": "#ffffff",
+            "secondary_button_label": "#ffffff",
+            "shadow": "#000000"
+          }
+        },
+        "scheme-4": {
+          "settings": {
+            "background": "#4f46e5",
+            "background_gradient": "linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)",
+            "text": "#ffffff",
+            "button": "#ffffff",
+            "button_label": "#4f46e5",
+            "secondary_button_label": "#ffffff",
+            "shadow": "#1a202c"
+          }
+        },
+        "scheme-5": {
+          "settings": {
+            "background": "#0f172a",
+            "background_gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+            "text": "#f1f5f9",
+            "button": "#06b6d4",
+            "button_label": "#ffffff",
+            "secondary_button_label": "#06b6d4",
+            "shadow": "#000000"
+          }
+        }
+      },
+      "type_header_font": "assistant_n4",
+      "heading_scale": 125,
+      "type_body_font": "assistant_n4",
+      "body_scale": 115,
+      "page_width": 1400,
+      "spacing_sections": 20,
+      "spacing_grid_horizontal": 32,
+      "spacing_grid_vertical": 32,
+      "animations_reveal_on_scroll": true,
+      "animations_hover_elements": "vertical-lift",
+      "buttons_border_thickness": 2,
+      "buttons_border_opacity": 100,
+      "buttons_radius": 8,
+      "buttons_shadow_opacity": 15,
+      "buttons_shadow_horizontal_offset": 0,
+      "buttons_shadow_vertical_offset": 4,
+      "buttons_shadow_blur": 12,
+      "variant_pills_border_thickness": 1,
+      "variant_pills_border_opacity": 60,
+      "variant_pills_radius": 20,
+      "variant_pills_shadow_opacity": 5,
+      "variant_pills_shadow_horizontal_offset": 0,
+      "variant_pills_shadow_vertical_offset": 2,
+      "variant_pills_shadow_blur": 8,
+      "inputs_border_thickness": 1,
+      "inputs_border_opacity": 20,
+      "inputs_radius": 6,
+      "inputs_shadow_opacity": 8,
+      "inputs_shadow_horizontal_offset": 0,
+      "inputs_shadow_vertical_offset": 2,
+      "inputs_shadow_blur": 8,
+      "card_style": "card",
+      "card_image_padding": 8,
+      "card_text_alignment": "left",
+      "card_color_scheme": "scheme-1",
+      "card_border_thickness": 1,
+      "card_border_opacity": 15,
+      "card_corner_radius": 12,
+      "card_shadow_opacity": 10,
+      "card_shadow_horizontal_offset": 0,
+      "card_shadow_vertical_offset": 4,
+      "card_shadow_blur": 16,
+      "collection_card_style": "card",
+      "collection_card_image_padding": 8,
+      "collection_card_text_alignment": "left",
+      "collection_card_color_scheme": "scheme-1",
+      "collection_card_border_thickness": 1,
+      "collection_card_border_opacity": 15,
+      "collection_card_corner_radius": 12,
+      "collection_card_shadow_opacity": 10,
+      "collection_card_shadow_horizontal_offset": 0,
+      "collection_card_shadow_vertical_offset": 4,
+      "collection_card_shadow_blur": 16,
+      "blog_card_style": "card",
+      "blog_card_image_padding": 8,
+      "blog_card_text_alignment": "left",
+      "blog_card_color_scheme": "scheme-1",
+      "blog_card_border_thickness": 1,
+      "blog_card_border_opacity": 15,
+      "blog_card_corner_radius": 12,
+      "blog_card_shadow_opacity": 10,
+      "blog_card_shadow_horizontal_offset": 0,
+      "blog_card_shadow_vertical_offset": 4,
+      "blog_card_shadow_blur": 16,
+      "text_boxes_border_thickness": 1,
+      "text_boxes_border_opacity": 15,
+      "text_boxes_radius": 8,
+      "text_boxes_shadow_opacity": 8,
+      "text_boxes_shadow_horizontal_offset": 0,
+      "text_boxes_shadow_vertical_offset": 2,
+      "text_boxes_shadow_blur": 12,
+      "media_border_thickness": 0,
+      "media_border_opacity": 0,
+      "media_radius": 12,
+      "media_shadow_opacity": 12,
+      "media_shadow_horizontal_offset": 0,
+      "media_shadow_vertical_offset": 4,
+      "media_shadow_blur": 20,
+      "popup_border_thickness": 1,
+      "popup_border_opacity": 20,
+      "popup_corner_radius": 16,
+      "popup_shadow_opacity": 25,
+      "popup_shadow_horizontal_offset": 0,
+      "popup_shadow_vertical_offset": 8,
+      "popup_shadow_blur": 32,
+      "drawer_border_thickness": 0,
+      "drawer_border_opacity": 0,
+      "drawer_shadow_opacity": 20,
+      "drawer_shadow_horizontal_offset": -4,
+      "drawer_shadow_vertical_offset": 0,
+      "drawer_shadow_blur": 24,
+      "badge_position": "top right",
+      "badge_corner_radius": 6,
+      "sale_badge_color_scheme": "scheme-4",
+      "sold_out_badge_color_scheme": "scheme-5",
+      "brand_headline": "AI-Powered Digital Solutions",
+      "brand_description": "<p>Konnect Hub Studio 是领先的 AI 数字人和视频制作平台，为企业提供专业的数字化解决方案。我们专注于 AI 数字人制作、视频内容创作和图像设计服务。</p>",
+      "brand_image_width": 200,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": false,
+      "predictive_search_show_price": true,
+      "currency_code_enabled": true,
+      "cart_type": "drawer",
+      "show_vendor": false,
+      "show_cart_note": true,
+      "cart_drawer_collection": "",
+      "cart_color_scheme": "scheme-1",
+      "sections": {
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "color_scheme": "scheme-3"
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "color_scheme": "scheme-3"
+          }
+        }
+      }
+    }
+  }
+}
