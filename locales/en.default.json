@@ -437,7 +437,8 @@
       "title": "Login",
       "sign_in": "Sign in",
       "submit": "Submit",
-      "alternate_provider_separator": "or"
+      "alternate_provider_separator": "or",
+      "secure_checkout": "Secure checkout with Konnect SSO"
     },
     "order": {
       "title": "Order {{ name }}",
@@ -486,7 +487,8 @@
       "last_name": "Last name",
       "email": "Email",
       "password": "Password",
-      "submit": "Create"
+      "submit": "Create",
+      "benefit": "Create your Konnect account to access studio services"
     },
     "reset_password": {
       "title": "Reset account password",

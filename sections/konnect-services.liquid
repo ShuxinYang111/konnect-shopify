@@ -1,0 +1,311 @@
+{{ 'section-konnect-services.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign show_mobile_slider = false
+  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
+    assign show_mobile_slider = true
+  endif
+-%}
+
+<section 
+  id="services"
+  class="konnect-services color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
+>
+  <div class="konnect-services__container page-width">
+    
+    {%- unless section.settings.title == blank -%}
+      <div class="konnect-services__header">
+        <h2 class="konnect-services__title {{ section.settings.heading_size }}">
+          {{ section.settings.title }}
+        </h2>
+        {%- if section.settings.description != blank -%}
+          <p class="konnect-services__description">
+            {{ section.settings.description }}
+          </p>
+        {%- endif -%}
+      </div>
+    {%- endunless -%}
+
+    <div class="konnect-services__grid grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'service' -%}
+            <div class="konnect-services__item" {{ block.shopify_attributes }}>
+              <div class="konnect-services__card">
+                
+                {%- if block.settings.icon != blank -%}
+                  <div class="konnect-services__icon konnect-services__icon--{{ block.settings.icon }}">
+                    {%- case block.settings.icon -%}
+                      {%- when 'video' -%}
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                        </svg>
+                      {%- when 'users' -%}
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                          <circle cx="9" cy="7" r="4"></circle>
+                          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                      {%- when 'palette' -%}
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <circle cx="13.5" cy="6.5" r=".5"></circle>
+                          <circle cx="17.5" cy="10.5" r=".5"></circle>
+                          <circle cx="8.5" cy="7.5" r=".5"></circle>
+                          <circle cx="6.5" cy="12.5" r=".5"></circle>
+                          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                        </svg>
+                      {%- else -%}
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <path d="M8 12l2 2 4-4"></path>
+                        </svg>
+                    {%- endcase -%}
+                  </div>
+                {%- endif -%}
+
+                <div class="konnect-services__content">
+                  {%- if block.settings.title != blank -%}
+                    <h3 class="konnect-services__card-title">
+                      {{ block.settings.title }}
+                    </h3>
+                  {%- endif -%}
+
+                  {%- if block.settings.description != blank -%}
+                    <p class="konnect-services__card-description">
+                      {{ block.settings.description }}
+                    </p>
+                  {%- endif -%}
+
+                  {%- if block.settings.link_text != blank and block.settings.link_url != blank -%}
+                    <a href="{{ block.settings.link_url }}" class="konnect-services__card-link">
+                      {{ block.settings.link_text }}
+                      <svg class="konnect-services__card-link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </a>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Konnect Services Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Three Modules",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "default": "Comprehensive AI solutions for all your content creation needs",
+      "label": "Description"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        },
+        {
+          "value": "hxl",
+          "label": "Extra large"
+        },
+        {
+          "value": "hxxl",
+          "label": "XX-Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3,
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 column"
+        },
+        {
+          "value": "2",
+          "label": "2 columns"
+        }
+      ],
+      "default": "1",
+      "label": "Number of columns on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "Enable swipe on mobile"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "service",
+      "name": "Service",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "video",
+              "label": "Video"
+            },
+            {
+              "value": "users",
+              "label": "Users"
+            },
+            {
+              "value": "palette",
+              "label": "Palette"
+            }
+          ],
+          "default": "video",
+          "label": "Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "Service Title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "default": "Service description goes here.",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "default": "Learn more",
+          "label": "Link text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Konnect Services Section",
+      "blocks": [
+        {
+          "type": "service",
+          "settings": {
+            "icon": "video",
+            "title": "AI Video Production",
+            "description": "Create commercial-grade videos with AI creation engines."
+          }
+        },
+        {
+          "type": "service",
+          "settings": {
+            "icon": "users",
+            "title": "AI Digital Human",
+            "description": "High-fidelity virtual presenters and voiceovers in multiple languages."
+          }
+        },
+        {
+          "type": "service",
+          "settings": {
+            "icon": "palette",
+            "title": "AI Image & Design",
+            "description": "Fast, on-brand visuals powered by AI and a pro creative team."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

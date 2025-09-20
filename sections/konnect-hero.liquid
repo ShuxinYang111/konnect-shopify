@@ -1,0 +1,271 @@
+{{ 'section-konnect-hero.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .konnect-hero-{{ section.id }}::after {
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+  }
+{%- endstyle -%}
+
+<section 
+  id="konnect-hero-{{ section.id }}"
+  class="konnect-hero konnect-hero-{{ section.id }} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding"
+>
+  <!-- Video Background -->
+  {%- if section.settings.video_url != blank -%}
+    <div class="konnect-hero__video-background">
+      <video 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        class="konnect-hero__video"
+        poster="{{ 'placeholder.svg' | asset_url }}"
+      >
+        <source src="{{ section.settings.video_url | asset_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="konnect-hero__overlay"></div>
+    </div>
+  {%- endif -%}
+
+  <!-- Floating Elements -->
+  <div class="konnect-hero__floating-elements">
+    <div class="konnect-hero__float konnect-hero__float--1"></div>
+    <div class="konnect-hero__float konnect-hero__float--2"></div>
+    <div class="konnect-hero__float konnect-hero__float--3"></div>
+    <div class="konnect-hero__float konnect-hero__float--4"></div>
+  </div>
+
+  <div class="konnect-hero__content page-width">
+    <div class="konnect-hero__inner">
+      
+      <!-- Badge -->
+      {%- if section.settings.badge_text != blank -%}
+        <div class="konnect-hero__badge">
+          <svg class="konnect-hero__badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9.663 17h4.673M12 3l1.5 6L21 12l-7.5 3L12 21l-1.5-6L3 12l7.5-3L12 3z"/>
+          </svg>
+          {{ section.settings.badge_text }}
+        </div>
+      {%- endif -%}
+
+      <!-- Headline -->
+      {%- if section.settings.heading != blank -%}
+        <h1 class="konnect-hero__heading">
+          {{ section.settings.heading }}
+        </h1>
+      {%- endif -%}
+
+      <!-- Subheadline -->
+      {%- if section.settings.subheading != blank -%}
+        <p class="konnect-hero__subheading">
+          {{ section.settings.subheading }}
+        </p>
+      {%- endif -%}
+
+      <!-- CTAs -->
+      <div class="konnect-hero__buttons">
+        {%- if section.settings.button_1_text != blank -%}
+          <a 
+            href="{{ section.settings.button_1_link }}" 
+            class="konnect-hero__button konnect-hero__button--primary"
+          >
+            {{ section.settings.button_1_text }}
+            <svg class="konnect-hero__button-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.button_2_text != blank -%}
+          <a 
+            href="{{ section.settings.button_2_link }}" 
+            class="konnect-hero__button konnect-hero__button--outline"
+          >
+            {{ section.settings.button_2_text }}
+          </a>
+        {%- endif -%}
+      </div>
+
+      <!-- Pricing Indicators -->
+      <div class="konnect-hero__pricing">
+        <p class="konnect-hero__pricing-label">Starting prices</p>
+        <div class="konnect-hero__pricing-items">
+          {%- if section.settings.ai_video_price != blank -%}
+            <div class="konnect-hero__pricing-item">
+              <div class="konnect-hero__pricing-title">AI Video</div>
+              <div class="konnect-hero__pricing-price">{{ section.settings.ai_video_price }}</div>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.ai_images_price != blank -%}
+            <div class="konnect-hero__pricing-item">
+              <div class="konnect-hero__pricing-title">AI Images</div>
+              <div class="konnect-hero__pricing-price">{{ section.settings.ai_images_price }}</div>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.ai_digital_human_price != blank -%}
+            <div class="konnect-hero__pricing-item">
+              <div class="konnect-hero__pricing-title">AI Digital Human</div>
+              <div class="konnect-hero__pricing-price">{{ section.settings.ai_digital_human_price }}</div>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Konnect Hero Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Your vision, powered by Konnect AI Studio",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "default": "No need to wrestle with endless AI apps, models, or platforms. Our AI specialists and design team handle it all, turning your ideas into high-impact content—fast, professional, and cost-efficient.",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "default": "Get your quote within 2 hours",
+      "label": "Badge Text"
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "default": "Get a quote",
+      "label": "Button 1 Text"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "default": "#contact",
+      "label": "Button 1 Link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "default": "Explore services",
+      "label": "Button 2 Text"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "default": "#services",
+      "label": "Button 2 Link"
+    },
+    {
+      "type": "header",
+      "content": "Video Background"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video File Name",
+      "info": "Upload video to assets folder and enter filename here (e.g., hero-background.mp4)"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Video Overlay Opacity",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Pricing"
+    },
+    {
+      "type": "text",
+      "id": "ai_video_price",
+      "default": "$70/min",
+      "label": "AI Video Price"
+    },
+    {
+      "type": "text",
+      "id": "ai_images_price",
+      "default": "$7/image",
+      "label": "AI Images Price"
+    },
+    {
+      "type": "text",
+      "id": "ai_digital_human_price",
+      "default": "$40+",
+      "label": "AI Digital Human Price"
+    },
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Konnect Hero Section"
+    }
+  ]
+}
+{% endschema %}

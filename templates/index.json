@@ -1,188 +1,94 @@
 {
   "sections": {
-    "rich-text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
+    "konnect-hero": {
+      "type": "konnect-hero",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "heading": "Your vision, powered by Konnect AI Studio",
+        "subheading": "No need to wrestle with endless AI apps, models, or platforms. Our AI specialists and design team handle it all, turning your ideas into high-impact content—fast, professional, and cost-efficient.",
+        "badge_text": "Get your quote within 2 hours",
+        "button_1_text": "Get a quote",
+        "button_1_link": "#contact",
+        "button_2_text": "Explore services",
+        "button_2_link": "#services",
+        "video_url": "hero-background.mp4",
+        "overlay_opacity": 50,
+        "ai_video_price": "$70/min",
+        "ai_images_price": "$7/image",
+        "ai_digital_human_price": "$40+",
         "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 20
       }
     },
-    "slideshow": {
-      "type": "slideshow",
+    "konnect-services": {
+      "type": "konnect-services",
       "blocks": {
-        "slide-0": {
-          "type": "slide",
+        "service-1": {
+          "type": "service",
           "settings": {
-            "heading": "",
-            "heading_size": "medium",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide-0"
-      ],
-      "settings": {
-        "layout": "grid",
-        "slide_height": "small",
-        "slider_visual": "dots",
-        "auto_rotate": true,
-        "change_slides_speed": 3,
-        "image_behavior": "none",
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand."
-      }
-    },
-    "rich-text-1": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Featured products",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "padding_top": 56,
-        "padding_bottom": 0
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 3,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 28,
-        "padding_bottom": 0
-      }
-    },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Expertly curated, affordably priced to fit your every need.",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "image-with-text-1": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Shop new arrivals",
-            "heading_size": "h2"
+            "icon": "video",
+            "title": "AI Video Production",
+            "description": "Create commercial-grade videos with AI creation engines that adapts to your goals—promo, product, education, or brand. Auto-generate horizontal/vertical cuts and multiple durations (15s–5min) ready for every platform.",
+            "link_url": "/collections/video-production",
+            "link_text": "Learn more"
           }
         },
-        "button": {
-          "type": "button",
+        "service-2": {
+          "type": "service",
           "settings": {
-            "button_label": "Shop all",
-            "button_link": "shopify://collections/all",
-            "button_style_secondary": false
+            "icon": "users",
+            "title": "AI Digital Human",
+            "description": "High-fidelity virtual presenters and voiceovers in multiple languages. Advanced lip-sync, natural delivery, HD output, and low compute requirements—so you get studio results without studio hardware.",
+            "link_url": "/collections/digital-human",
+            "link_text": "Learn more"
+          }
+        },
+        "service-3": {
+          "type": "service",
+          "settings": {
+            "icon": "palette",
+            "title": "AI Image & Design",
+            "description": "Fast, on-brand visuals powered by AI and a pro creative team. Posters, packaging, game UI, scene illustrations, and character/mascot design—tailored to your campaign.",
+            "link_url": "/collections/image-design",
+            "link_text": "Learn more"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "service-1",
+        "service-2", 
+        "service-3"
       ],
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "large",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 56
+        "title": "Three Modules",
+        "description": "Comprehensive AI solutions for all your content creation needs",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "color_scheme": "scheme-1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "konnect-contact": {
+      "type": "konnect-contact",
+      "settings": {
+        "heading": "Let's make something brilliant with AI.",
+        "subheading": "You get cutting-edge results—without the learning curve. Tell us what you need and we'll propose a cost-efficient, custom solution.",
+        "form_title": "Contact",
+        "form_description": "Ready to transform your ideas into reality? Get in touch with our team.<br><span class=\"text-sm text-muted-foreground mt-2 block\">Get your quote within 2 hours</span>",
+        "button_text": "Send request",
+        "success_message": "Message sent successfully! You'll receive your quote within 2 hours.",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
   "order": [
-    "rich-text",
-    "slideshow",
-    "rich-text-1",
-    "featured-collection",
-    "image-with-text",
-    "image-with-text-1"
+    "konnect-hero",
+    "konnect-services",
+    "konnect-contact"
   ]
 }

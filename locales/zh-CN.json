@@ -436,7 +436,8 @@
       "title": "登录",
       "sign_in": "登录",
       "submit": "提交",
-      "alternate_provider_separator": "或"
+      "alternate_provider_separator": "或",
+      "secure_checkout": "基于 Konnect SSO 的安全结账"
     },
     "orders": {
       "title": "订单历史记录",
@@ -459,7 +460,8 @@
       "last_name": "姓氏",
       "email": "电子邮件",
       "password": "密码",
-      "submit": "创建"
+      "submit": "创建",
+      "benefit": "创建 Konnect 账户以使用 Studio 服务"
     },
     "reset_password": {
       "title": "重置账户密码",

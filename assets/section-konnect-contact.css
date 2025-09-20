@@ -1,0 +1,309 @@
+/* Konnect Contact Section Styles */
+
+.konnect-contact {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, hsl(220, 14%, 96%), hsl(0, 0%, 99%));
+}
+
+.konnect-contact__container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .konnect-contact__container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .konnect-contact__container {
+    padding: 0 2rem;
+  }
+}
+
+.konnect-contact__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.konnect-contact__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(266, 100%, 78%) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .konnect-contact__title {
+    font-size: 2.5rem;
+  }
+}
+
+.konnect-contact__title.h0 {
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .konnect-contact__title.h0 {
+    font-size: 3rem;
+  }
+}
+
+.konnect-contact__title.hxl {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .konnect-contact__title.hxl {
+    font-size: 3.5rem;
+  }
+}
+
+.konnect-contact__title.hxxl {
+  font-size: 3.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .konnect-contact__title.hxxl {
+    font-size: 4rem;
+  }
+}
+
+.konnect-contact__description {
+  font-size: 1.125rem;
+  color: hsl(220, 9%, 46%);
+  max-width: 32rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.konnect-contact__form-wrapper {
+  border: none;
+  border-radius: 0.75rem;
+  background: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(220, 14%, 98%) 100%);
+  box-shadow: 0 10px 30px -10px rgba(262, 83%, 58%, 0.3);
+  overflow: hidden;
+}
+
+.konnect-contact__form-header {
+  text-align: center;
+  padding: 2rem 2rem 0;
+}
+
+.konnect-contact__form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: hsl(224, 71%, 4%);
+}
+
+.konnect-contact__form-description {
+  color: hsl(220, 9%, 46%);
+  line-height: 1.6;
+}
+
+.konnect-contact__form {
+  padding: 2rem;
+}
+
+.konnect-contact__success,
+.konnect-contact__errors {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.konnect-contact__success {
+  background-color: hsl(142, 76%, 36%);
+  color: white;
+}
+
+.konnect-contact__errors {
+  background-color: hsl(0, 84%, 60%);
+  color: white;
+}
+
+.konnect-contact__success-icon,
+.konnect-contact__error-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.konnect-contact__success h3,
+.konnect-contact__errors h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.konnect-contact__errors ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.konnect-contact__errors li {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.konnect-contact__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.konnect-contact__field-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .konnect-contact__field-group {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.konnect-contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.konnect-contact__label {
+  font-weight: 500;
+  color: hsl(224, 71%, 4%);
+  font-size: 0.875rem;
+}
+
+.konnect-contact__input,
+.konnect-contact__textarea {
+  padding: 0.75rem;
+  border: 1px solid hsl(220, 13%, 91%);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.konnect-contact__input:focus,
+.konnect-contact__textarea:focus {
+  border-color: hsl(262, 83%, 58%);
+  box-shadow: 0 0 0 3px rgba(262, 83%, 58%, 0.1);
+}
+
+.konnect-contact__select {
+  padding: 0.75rem;
+  border: 1px solid hsl(220, 13%, 91%);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  appearance: none;
+  background-image: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.konnect-contact__field {
+  position: relative;
+}
+
+.konnect-contact__select-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: hsl(220, 9%, 46%);
+  margin-top: 1.25rem; /* Account for label */
+}
+
+.konnect-contact__select:focus {
+  border-color: hsl(262, 83%, 58%);
+  box-shadow: 0 0 0 3px rgba(262, 83%, 58%, 0.1);
+}
+
+.konnect-contact__textarea {
+  resize: none;
+  min-height: 7.5rem;
+}
+
+.konnect-contact__submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.konnect-contact__button {
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(266, 100%, 78%) 100%);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px -10px rgba(262, 83%, 58%, 0.3);
+}
+
+.konnect-contact__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px -10px rgba(262, 83%, 58%, 0.4);
+}
+
+.konnect-contact__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.konnect-contact__note {
+  font-size: 0.875rem;
+  color: hsl(220, 9%, 46%);
+  text-align: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .konnect-contact {
+    padding: 3rem 0;
+  }
+  
+  .konnect-contact__header {
+    margin-bottom: 2rem;
+  }
+  
+  .konnect-contact__title {
+    font-size: 1.75rem;
+  }
+  
+  .konnect-contact__form-header {
+    padding: 1.5rem 1.5rem 0;
+  }
+  
+  .konnect-contact__form {
+    padding: 1.5rem;
+  }
+  
+  .konnect-contact__form-title {
+    font-size: 1.25rem;
+  }
+}

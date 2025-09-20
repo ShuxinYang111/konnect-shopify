@@ -18,6 +18,10 @@
 
 {%- paginate customer.addresses by 5 -%}
   <div class="customer addresses section-{{ section.id }}-padding" data-customer-addresses>
+    <div class="khs-intro">
+      <h2 class="khs-intro__title">Konnect Addresses</h2>
+      <p class="khs-intro__subtitle">Save preferred shipping info for faster AI service delivery</p>
+    </div>
     <h1>{{ 'customer.addresses.title' | t }}</h1>
     <a href="{{ routes.account_url }}">
       {{ 'customer.account.return' | t }}

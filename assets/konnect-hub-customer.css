@@ -109,4 +109,26 @@
   box-shadow: 0 1px 0 hsl(var(--khs-border));
 }
 
+/* Konnect intro block */
+.khs-intro {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid hsl(var(--khs-border));
+  border-radius: 14px;
+  background: hsl(var(--khs-surface));
+  box-shadow: var(--khs-shadow-card);
+}
+
+.khs-intro__title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.khs-intro__subtitle {
+  margin: 0;
+  color: hsl(var(--khs-foreground) / 0.7);
+  font-size: 1.4rem;
+}
+
 
